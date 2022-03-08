@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 100px 1fr 20px;
+  grid-template-areas:
+    "nav"
+    "header"
+    "main"
+    "footer";
+}
+
+nav {
+  background-color: #000000dc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: nav;
+}
+
+.linkbutton {
+  background-color: #c4cf27;
+  color: rgba(0, 0, 0);
+  opacity: 85%;
+  font-family: monospace;
+  border: rgba(0, 0, 0, 0.199);
+  border-radius: 10%;
+  border-style: groove;
+  padding: 3px;
+  font-size: 20px;
+  text-align: center;
+  opacity: 85%;
+}
+
+.linkbutton:hover {
+  background-color: #f32167;
+}
+
+header {
+  background-image: url(picture-howto.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  grid-area: header;
+}
+
+main {
+  background-color: #000000dc;
+  grid-area: main;
+}
+
+.article {
+  margin: 25px;
+  background-color: #c4cf27;
+  color: rgb(8, 8, 8);
+  font-family: monospace;
+  border: rgba(0, 0, 0, 0.13);
+  border-radius: 10%;
+  border-style: groove;
+  padding: 15px;
+  font-size: 24px;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video {
+  background-color: #c4cf27;
+  margin-bottom: 10px;
+  padding: 1.5%;
+  color: rgba(0, 0, 0);
+  opacity: 85%;
+  font-family: monospace;
+  border: rgba(0, 0, 0, 0.199);
+  border-radius: 8%;
+  border-style: groove;
+  font-size: 20px;
+  text-align: center;
+  opacity: 85%;
+}
+
+footer {
+  background-color: #c4cf279f;
+  color: rgba(0, 0, 0, 0.877);
+  grid-area: footer;
+  text-align: center;
+}
+
+@media screen and (min-width: 1280px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 1fr 25px;
+    grid-template-areas:
+      "header nav"
+      "header main"
+      "footer footer";
+  }
+
+  h1 {
+    margin-top: 200px;
+    font-size: 5rem;
+    padding-right: 30px;
+  }
+
+  .linkbutton {
+    font-size: 35px;
+  }
+
+  .video-container {
+    margin-top: 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
